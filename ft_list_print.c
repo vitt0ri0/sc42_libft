@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_create_elem.c                                   :+:      :+:    :+:   */
+/*   ft_print_list.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emetapod <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/12 17:07:34 by emetapod          #+#    #+#             */
-/*   Updated: 2020/02/12 17:59:52 by emetapod         ###   ########.fr       */
+/*   Created: 2020/02/12 17:44:15 by emetapod          #+#    #+#             */
+/*   Updated: 2020/02/12 19:31:21 by emetapod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "ft_list.h"
+#include "headers.h"
 
-t_list	*ft_create_elem(void *data)
+void	ft_list_print(t_list *list)
 {
-	t_list *new;
-
-	new = malloc(sizeof(t_list));
-	if (new)
+	while (list)
 	{
-		new->data = data;
-		new->next = NULL;
+		ft_putstr(list->data);
+		ft_putstr("\n");
+		list = list->next;
 	}
-	return (new);
 }

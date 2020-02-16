@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_list.c                                    :+:      :+:    :+:   */
+/*   ft_list_last.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emetapod <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/12 17:44:15 by emetapod          #+#    #+#             */
-/*   Updated: 2020/02/12 19:31:21 by emetapod         ###   ########.fr       */
+/*   Created: 2020/02/12 20:54:30 by emetapod          #+#    #+#             */
+/*   Updated: 2020/02/12 21:00:02 by emetapod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "headers.h"
 
-void	ft_print_list(t_list *list)
+t_list	*ft_list_last(t_list *begin_list)
 {
-	while (list)
-	{
-		ft_putstr(list->data);
-		ft_putstr("\n");
+	t_list *list;
+
+	list = begin_list;
+	if (!list)
+		return (list);
+	while (list->next)
 		list = list->next;
-	}
+	return (list);
 }

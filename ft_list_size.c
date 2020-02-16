@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list.h                                          :+:      :+:    :+:   */
+/*   ft_list_size.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emetapod <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/12 17:11:02 by emetapod          #+#    #+#             */
-/*   Updated: 2020/02/12 17:41:26 by emetapod         ###   ########.fr       */
+/*   Created: 2020/02/12 20:05:08 by emetapod          #+#    #+#             */
+/*   Updated: 2020/02/12 22:10:05 by emetapod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIST_H
-# define FT_LIST_H
+#include "headers.h"
 
-typedef struct		s_list
+int	ft_list_size(t_list *begin_list)
 {
-	struct s_list	*next;
-	void			*data;
-}					t_list;
+	int		i;
+	t_list	*list;
 
-#endif
+	i = 0;
+	list = begin_list;
+	if (!list)
+		return (0);
+	while (list->next)
+	{
+		list = list->next;
+		i++;
+	}
+	return (i + 1);
+}

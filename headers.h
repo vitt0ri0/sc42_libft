@@ -1,3 +1,6 @@
+#include <unistd.h>
+#include <stdlib.h>
+
 //printing
 void	ft_putchar(char c);
 void	ft_putnbr(int nb);
@@ -27,9 +30,11 @@ typedef struct		s_list
 #endif
 
 t_list		*ft_create_elem(void *data);
-void	ft_print_list(t_list *list);
+void	ft_list_print(t_list *list);
 void	ft_list_push_front(t_list **begin, void *data);
 void	ft_list_push_back(t_list **begin, void *data);
+int		ft_list_size(t_list *begin_list);
+t_list	*ft_list_last(t_list *begin_list);
 
 // TREES
 
