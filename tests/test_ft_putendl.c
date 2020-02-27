@@ -1,4 +1,6 @@
 #include "../libft.h"
+#include "../ft_putchar.c"
+#include "../ft_putendl.c"
 #include <stdio.h>
 
 int	main(void)

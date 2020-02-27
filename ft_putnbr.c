@@ -14,21 +14,21 @@
 
 void	ft_putnbr(int n)
 {
-	if (nb < 0)
+	if (n < 0)
 	{
 		ft_putchar('-');
-		if (!(nb / 10 == 0))
-			ft_putnbr(-(nb / 10));
-		ft_putchar(48 - nb % 10);
+		if (!(n / 10 == 0))
+			ft_putnbr(-(n / 10));
+		ft_putchar(48 - n % 10);
 	}
 	else
 	{
-		if (nb / 10 == 0)
-			ft_putchar(48 + nb % 10);
+		if (n / 10 == 0)
+			ft_putchar(48 + n % 10);
 		else
 		{
-			ft_putnbr(nb / 10);
-			ft_putchar(48 + nb % 10);
+			ft_putnbr(n / 10);
+			ft_putchar(48 + n % 10);
 		}
 	}
 }

@@ -1,4 +1,8 @@
 #include "../libft.h"
+#include "../ft_putnbr.c"
+#include "../ft_putnbr_e.c"
+#include "../ft_putstr.c"
+#include "../ft_putchar.c"
 
 int main(void)
 {
