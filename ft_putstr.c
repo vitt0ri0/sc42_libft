@@ -10,16 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include "libft.h"
 
-void	ft_putstr(void *string)
+void	ft_putstr(char const *s)
 {
-	char *str;
-	str = (char*)string;
-	while (*str)
-	{
-		ft_putchar(*str);
-		str++;
-	}
-	ft_putchar('\n');
+	while (*s)
+		write(1, s++, 1);
 }

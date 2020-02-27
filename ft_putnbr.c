@@ -3,29 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emetapod <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kwillum <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/04 19:56:26 by emetapod          #+#    #+#             */
-/*   Updated: 2020/02/10 15:33:50 by emetapod         ###   ########.fr       */
+/*   Created: 2020/02/03 14:07:08 by kwillum           #+#    #+#             */
+/*   Updated: 2020/02/16 20:25:00 by kwillum          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "headers.h"
+#include "libft.h"
 
-void	ft_putnbr(int nb)
+void	ft_putnbr(int n)
 {
-	if (nb >= 0 && nb < 10)
-		ft_putchar(nb + '0');
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-		ft_putchar(nb % 10 + '0');
-	}
 	if (nb < 0)
 	{
 		ft_putchar('-');
-		if (nb < -9)
+		if (!(nb / 10 == 0))
 			ft_putnbr(-(nb / 10));
-		ft_putchar(-(nb % 10) + '0');
+		ft_putchar(48 - nb % 10);
+	}
+	else
+	{
+		if (nb / 10 == 0)
+			ft_putchar(48 + nb % 10);
+		else
+		{
+			ft_putnbr(nb / 10);
+			ft_putchar(48 + nb % 10);
+		}
 	}
 }
