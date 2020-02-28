@@ -1,21 +1,11 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: emetapod <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/05 18:34:18 by emetapod          #+#    #+#             */
-/*   Updated: 2020/02/05 18:35:55 by emetapod         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include "libft.h"
 
-int	ft_strlen(char *str)
+size_t ft_strlen(const char *s)
 {
-	char *start;
+	size_t len;
 
-	start = str;
-	while (*str)
-		str++;
-	return (str - start);
+	len = 0;
+	while (s[len])
+		len++;
+	return (len);
 }
