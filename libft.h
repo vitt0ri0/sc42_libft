@@ -21,6 +21,7 @@ size_t	ft_strlen(const char *s);
 char	*ft_strchr(const char *s, int c);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_bzero(void *s, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
 
 size_t	ft_strlen_e(const char *s);
 void	ft_putnbr_e(int n);
