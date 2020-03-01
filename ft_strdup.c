@@ -2,7 +2,7 @@
 
 char	*ft_strdup(const char *src)
 {
-	int		counter;
+	int	counter;
 	char	*p;
 
 	counter = 0;
